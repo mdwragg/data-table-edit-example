@@ -1,0 +1,20 @@
+{
+  "name": "data-table-edit",
+  "authors": [
+    "Martin Wragg <martin.wragg@ge.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "px-data-table": "^1.14.21"
+  }
+}

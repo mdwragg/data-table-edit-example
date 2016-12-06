@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <script src="../webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link href="../polymer/polymer.html" rel="import">
+  <link rel="import" href="../px-theme/px-theme-styles.html">
+  <style include="px-theme-styles" is="custom-style"></style>
+  <link href="../px-data-table/px-data-table.html" rel="import">
+
+  <body>
+    <template id="app" is="dom-bind">
+      <px-data-table on-table-data-changed="valueChanged" table-data={{moo}}>
+        <px-data-table-column name="first" editable>
+        </px-data-table-column>
+      </px-data-table>
+      <br />
+      <br />
+
+      <span>Cell Value changed to: {{newValue}}</span>
+
+    </template>
+  </body>
+
+  <script>
+    window.addEventListener('WebComponentsReady', function() {
+      var app = document.getElementById('app');
+      app.moo = [{"first":"Valentine"},{"first":"Silva"},{"first":"Hopkins"}];
+      app.newValue = "";
+
+      app.valueChanged = function(e){
+        app.newValue = e.detail.value;
+      }
+    });
+  </script>
+</html>
